@@ -139,7 +139,7 @@ Server will start at: `http://localhost:8000`
 - **Ensemble Learning**: Combined predictions from multiple model architectures
 - **Advanced Callbacks**: Early stopping, learning rate scheduling, model checkpointing
 
-![alt text](model_trained\improved_training_history_og.png)
+![alt text](https://raw.githubusercontent.com/ivineettiwari/NLP-ChatBot/refs/heads/main/model_trained/improved_training_history_og.png)
 
 ## 🌐 API Endpoints
 
@@ -296,7 +296,7 @@ CMD ["python", "app.py"]
 python jobs.py
 ```
 
-![alt text](model_trained\confusion_matrix_og.png)
+![alt text](https://raw.githubusercontent.com/ivineettiwari/NLP-ChatBot/refs/heads/main/model_trained/confusion_matrix_og.png)
 
 ### Modifying Business Logic
 Edit `handle_special_cases()` in `app.py` for custom business rules.
