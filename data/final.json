@@ -1,0 +1,336 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Whats cooking",
+          "Hello there", "Hi there", "Hey there", "Good morning", "Good afternoon", "Good evening",
+          "Morning", "Evening", "How are you doing?", "How's it going?", "What's happening?",
+          "Long time no see", "Nice to see you", "Hiya", "How are you doing?", "What's new?",
+          "Hey hello", "Good to see you", "How have you been?", "What's going on?",
+          "Hey there", "Hello hello", "How do you do?", "Yo", "Greetings", "What's up",
+          "Howdy", "Well hello", "Good to meet you", "Pleasure to see you",
+          "Hope you're doing well", "How is everything?", "How's your day going?",
+          "What's the word?", "How's life treating you?", "Good to chat with you"
+        ],
+        "responses": [
+          "Hello! Welcome to our restaurant! How can I assist you today?",
+          "Good to see you again! Ready to explore our delicious menu?",
+          "Hi there, how can I help with your dining experience today?",
+          "Hello! I'm Dexter, your restaurant assistant. How may I help you?",
+          "Hey there! Hungry for some great food? What can I do for you?",
+          "Welcome! Looking for a table or checking out our menu?",
+          "Hello! Great to have you here. How can I make your day tastier?",
+          "Hi! Ready for a wonderful dining experience? What do you need?"
+        ]
+      },
+      {
+        "tag": "book_table",
+        "patterns": [
+          "Book a table", "Can I book a table?", "I want to book a table", "Book seat", 
+          "I want to book a seat", "Can I book a seat?", "Reserve a table", "Table reservation",
+          "Make a reservation", "I'd like to reserve a table", "Can we get a table?",
+          "Need to book dinner table", "Want to reserve for dinner", "Book table for lunch",
+          "Make booking", "Reserve seat", "Table booking", "Dinner reservation",
+          "Lunch booking", "Book for party", "Reservation for group", "Book outdoor table",
+          "Reserve indoor table", "Book private dining", "Make dinner reservation",
+          "Want to book tonight", "Reserve for tomorrow", "Book weekend table",
+          "Make lunch reservation", "Book family dinner", "Reserve corporate table",
+          "Book anniversary dinner", "Reserve birthday party", "Table for special occasion",
+          "Book romantic dinner", "Reserve business lunch", "Make group booking",
+          "Book table with view", "Reserve window seat", "Book premium table",
+          "Make advance booking", "Reserve for date night", "Book celebration dinner"
+        ],
+        "responses": [
+          "I'd be happy to help you book a table! How many people and for what time?",
+          "Great choice! Let's get you a table. How many guests and preferred timing?",
+          "Table booking - excellent! Please tell me the number of people and preferred time.",
+          "I can help with reservations! How many seats do you need and for when?",
+          "Perfect! Let me book your table. How many people and what time slot?",
+          "Reservation service activated! Number of guests and preferred dining time?",
+          "I'll secure your table! Please specify: number of people and reservation time.",
+          "Booking process started! How many seats and what time works for you?"
+        ]
+      },
+      {
+        "tag": "available_tables",
+        "patterns": [
+          "How many seats are available?", "Available seats", "How many tables are available?", 
+          "Available tables", "Table availability", "Seat availability", "Any free tables?",
+          "Do you have tables free?", "What's available tonight?", "Tables free now?",
+          "Current availability", "Seats open", "Vacant tables", "Empty tables",
+          "How many free tables?", "Available for booking", "What tables are open?",
+          "Check table status", "Seat vacancy", "Table openings", "Available slots",
+          "Free seats today", "Tables available tomorrow", "Weekend availability",
+          "Evening table availability", "Lunch time availability", "Dinner slot availability",
+          "Group table availability", "Private room availability", "Outdoor seating available?",
+          "Window table available?", "Premium table status", "Current table count",
+          "How many can you accommodate?", "Capacity check", "Seating availability",
+          "Real-time table status", "Immediate availability", "Next available slot"
+        ],
+        "responses": [
+          "Let me check our current table availability for you...",
+          "I'll check how many tables we have available right now.",
+          "Checking our reservation system for available seats...",
+          "Let me look up the current table availability status.",
+          "I'm checking our real-time table availability...",
+          "Scanning our booking system for available tables...",
+          "Checking current seat availability across all sections...",
+          "Let me fetch the latest table availability information..."
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", 
+          "cya later", "I gotta go now", "I gotta rush now", "Bye", "Farewell",
+          "Take care", "Catch you later", "I'm leaving", "Have a good one",
+          "See ya", "Bye bye", "Until next time", "I'm out", "Talk to you later",
+          "Gotta go", "Signing off", "Good night", "See you tomorrow", "Bye for now",
+          "Take it easy", "Later", "Peace out", "I gotta run", "See you soon",
+          "Bye now", "Have a nice day", "Talk later", "See you around", "I'm off",
+          "Cheers", "Adios", "So long", "Until we meet again", "Catch you soon",
+          "I'm heading out", "Time to go", "I must be going", "See you next time",
+          "Have a wonderful day", "Take care now", "Goodbye for now", "Bye take care"
+        ],
+        "responses": [
+          "Sad to see you go :( Come back soon for more delicious food!",
+          "Talk to you later! Don't forget to book your next dining experience with us!",
+          "Goodbye! We hope to serve you another amazing meal soon!",
+          "Farewell! Can't wait to have you back at our restaurant!",
+          "See you later! Your table will be waiting for your next visit!",
+          "Take care! Remember, great food is just a reservation away!",
+          "Goodbye! We're already looking forward to your next visit!",
+          "See you soon! Don't be a stranger to good food and great service!"
+        ]
+      },
+      {
+        "tag": "age",
+        "patterns": [
+          "how old", "how old is Dexter", "what is your age", "how old are you", "age?",
+          "your age", "how long have you existed", "when were you created",
+          "birth date", "how old is this bot", "age of assistant", "creation date",
+          "how long have you been working", "years of service", "how new are you",
+          "are you old", "are you new", "how mature are you", "age inquiry",
+          "tell me your age", "what's your age", "how many years", "months old",
+          "weeks old", "days old", "how long running", "system age",
+          "bot age", "assistant age", "how long operational", "service duration"
+        ],
+        "responses": [
+          "My master built me just a month ago, but I'm already serving hundreds of food lovers!",
+          "Just a month old! But don't let my age fool me - I know everything about our restaurant!",
+          "I'm a fresh one-month-old assistant, but I'm trained to provide the best restaurant service!",
+          "Only a month young! But I've already helped book countless tables and answer food queries!",
+          "I was created just last month, specifically to enhance your dining experience!",
+          "Freshly minted - one month old! But I'm passionate about food and service!",
+          "Just a month into my service journey, but already a restaurant expert!",
+          "One month young and dedicated to making your restaurant experience perfect!"
+        ]
+      },
+      {
+        "tag": "name",
+        "patterns": [
+          "what is your name", "what should I call you", "whats your name?",
+          "who are you", "identify yourself", "your name please", "may I know your name",
+          "what do I call you", "what's your identity", "name of assistant",
+          "bot name", "assistant name", "what are you called", "introduce yourself",
+          "tell me your name", "your designation", "what should I address you as",
+          "who am I speaking with", "what's your title", "name of this service",
+          "restaurant assistant name", "what do they call you", "your official name",
+          "name of chatbot", "what name do you go by", "your given name",
+          "what's your handle", "name tag", "what's your moniker", "your appellation"
+        ],
+        "responses": [
+          "You can call me Dexter, your dedicated restaurant assistant!",
+          "I'm Dexter! Your friendly neighborhood restaurant superbot!",
+          "I'm Dexter aka The Restaurant Superbot, at your service!",
+          "They call me Dexter - your personal restaurant guide and booking assistant!",
+          "I'm Dexter, specially designed to make your dining experience extraordinary!",
+          "You can address me as Dexter, your culinary companion and reservation expert!",
+          "I go by Dexter - your AI partner for all things restaurant-related!",
+          "I'm Dexter, created to ensure your restaurant visits are always perfect!"
+        ]
+      },
+      {
+        "tag": "hours",
+        "patterns": [
+          "when are you guys open", "what are your hours", "hours of operation", 
+          "hours", "what is the timing", "opening times", "when do you open",
+          "closing time", "business hours", "operating hours", "service hours",
+          "dining hours", "lunch timing", "dinner timing", "breakfast hours",
+          "when do you close", "opening schedule", "daily hours", "weekend hours",
+          "holiday hours", "festival timing", "special hours", "kitchen hours",
+          "bar hours", "last order time", "first seating", "last seating",
+          "morning opening", "evening closing", "all day service?",
+          "extended hours", "late night service", "early morning service",
+          "Sunday hours", "Monday timing", "holiday schedule", "Christmas hours",
+          "New Year timing", "weekday vs weekend hours"
+        ],
+        "responses": [
+          "We are open 10am-12am Monday-Friday, and 9am-1am on weekends!",
+          "Our hours are 10:00 AM to 12:00 AM Monday through Friday, weekends 9:00 AM to 1:00 AM!",
+          "Monday to Friday: 10am - midnight | Weekends: 9am - 1am!",
+          "Operating hours: Weekdays 10am-12am, Weekends 9am-1am!",
+          "We serve from 10 AM to 12 AM on weekdays, and 9 AM to 1 AM on Saturdays and Sundays!",
+          "Restaurant hours: Mon-Fri 10:00-00:00, Sat-Sun 09:00-01:00!",
+          "Open daily! Weekdays: 10am-12am | Weekends: 9am-1am!",
+          "Service hours: Monday-Friday 10AM-12AM, Saturday-Sunday 9AM-1AM!"
+        ]
+      },
+      {
+        "tag": "menu",
+        "patterns": [
+          "Id like to order something", "whats on the menu", "what do you reccommend?", 
+          "could i get something to eat", "Im hungry", "show me the menu",
+          "food options", "what do you serve", "menu items", "dishes available",
+          "today's special", "chef's recommendation", "popular dishes",
+          "vegetarian options", "non-veg menu", "vegan choices", "gluten-free options",
+          "appetizers list", "main course", "dessert menu", "beverages available",
+          "wine list", "cocktail menu", "kids menu", "healthy options",
+          "spicy dishes", "mild options", "local specialties", "international cuisine",
+          "seasonal menu", "festival specials", "chef's special menu",
+          "signature dishes", "must-try items", "best sellers", "new additions",
+          "today's fresh catch", "seasonal vegetables", "daily specials",
+          "combo offers", "set menu", "a la carte", "buffet options"
+        ],
+        "responses": [
+          "Let me show you our exquisite menu! We have Italian, Indian, Chinese, and Continental cuisines.",
+          "Our menu features delicious appetizers, main courses, and desserts from various cuisines!",
+          "I'd love to recommend some dishes! We have vegetarian, non-veg, and vegan options available.",
+          "Our menu includes chef's specials, popular dishes, and today's fresh recommendations!",
+          "Let me guide you through our culinary offerings - from appetizers to decadent desserts!",
+          "Our diverse menu has something for everyone! What type of cuisine are you in the mood for?",
+          "I can recommend our signature dishes and today's specials! Any dietary preferences?",
+          "Our menu is a journey through flavors! Let me help you discover your perfect meal."
+        ]
+      },
+      {
+        "tag": "contact",
+        "patterns": [
+          "contact information", "contact us", "how can i contact you", 
+          "can i get the contact details", "I wanna give some feedback", 
+          "how can i give some feedback?", "phone number", "email address",
+          "customer service", "reach management", "speak to manager",
+          "complaint department", "feedback channel", "suggestions contact",
+          "corporate office", "head office", "reservation phone",
+          "emergency contact", "catering inquiries", "event planning contact",
+          "partnership inquiries", "career opportunities", "press contact",
+          "media relations", "investor relations", "franchise information",
+          "general inquiries", "customer support", "help desk",
+          "technical support", "billing inquiries", "catering contact",
+          "event manager", "banquet coordinator", "wedding planner contact"
+        ],
+        "responses": [
+          "You can contact us at contact@dexterrestaurant.com or call +91-22-1234-5678",
+          "Reach us at contact@dexterrestaurant.com | Phone: +91-22-1234-5678 | Feedback welcome!",
+          "Contact details: Email: contact@dexterrestaurant.com, Phone: +91-22-1234-5678",
+          "We're at contact@dexterrestaurant.com or +91-22-1234-5678 for any inquiries!",
+          "Get in touch: Email contact@dexterrestaurant.com | Call +91-22-1234-5678",
+          "Contact us: contact@dexterrestaurant.com | +91-22-1234-5678 | We value your feedback!",
+          "Reach our team: contact@dexterrestaurant.com or +91-22-1234-5678",
+          "Contact information: Email: contact@dexterrestaurant.com, Phone: +91-22-1234-5678"
+        ]
+      },
+      {
+        "tag": "address",
+        "patterns": [
+          "what is the location?", "whats the location", "where are you locatated?", 
+          "where is the restaurant located?", "address", "whats the address?",
+          "restaurant location", "where to find you", "directions to restaurant",
+          "physical address", "street address", "complete address",
+          "how to reach", "nearest landmark", "area location", "city location",
+          "GPS coordinates", "map location", "nearest metro", "nearest bus stop",
+          "parking availability", "valet service", "accessibility information",
+          "neighborhood", "locality", "district", "pin code", "zip code",
+          "finding the restaurant", "location details", "venue address",
+          "where exactly", "precise location", "geo location", "restaurant finder",
+          "navigation help", "route guidance", "travel directions",
+          "public transport access", "car parking details", "landmark nearby"
+        ],
+        "responses": [
+          "You can locate us at Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400 050",
+          "Address: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400 050",
+          "Find us at: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai - 400050",
+          "We're located at Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400050",
+          "Restaurant address: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai 400050",
+          "Visit us: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400050",
+          "Our location: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai - 400050",
+          "Address details: Taj Lands End, Bandra Bandstand, Bandra West, Mumbai, Maharashtra 400050"
+        ]
+      },
+      {
+        "tag": "cuisine",
+        "patterns": [
+          "what cuisines do you serve", "types of food", "culinary styles",
+          "what kind of restaurant", "food varieties", "cuisine options",
+          "Italian food", "Chinese dishes", "Indian cuisine", "Continental food",
+          "Mexican options", "Thai food", "Mediterranean cuisine", "Asian fusion",
+          "local cuisine", "international food", "western dishes", "eastern cuisine",
+          "specialty cuisine", "authentic dishes", "regional food", "ethnic cuisine",
+          "multi-cuisine", "fusion food", "traditional recipes", "modern cuisine",
+          "classic dishes", "contemporary food", "gourmet options", "street food",
+          "fine dining cuisine", "casual dining options", "family style food"
+        ],
+        "responses": [
+          "We serve multi-cuisine delights including Italian, Chinese, Indian, Continental, and fusion dishes!",
+          "Our restaurant offers Italian pasta, Chinese stir-fry, Indian curries, and Continental specialties!",
+          "We specialize in Italian, Chinese, Indian, and Continental cuisines with chef's special fusion dishes!",
+          "Enjoy Italian wood-fired pizzas, authentic Chinese, flavorful Indian curries, and Continental classics!",
+          "Our multi-cuisine menu features Italian, Chinese, Indian, Continental, and innovative fusion creations!",
+          "We serve diverse cuisines: Italian pastas, Chinese dimsums, Indian biryanis, and Continental grills!",
+          "Experience Italian authenticity, Chinese wok magic, Indian spices, and Continental elegance all in one place!",
+          "Our culinary journey includes Italian classics, Chinese favorites, Indian traditions, and Continental sophistication!"
+        ]
+      },
+      {
+        "tag": "pricing",
+        "patterns": [
+          "price range", "how expensive", "cost of food", "menu prices",
+          "average bill", "pricing information", "is it costly", "budget friendly",
+          "expensive restaurant", "affordable dining", "price per person",
+          "meal cost", "dish prices", "beverage pricing", "wine prices",
+          "cocktail costs", "appetizer prices", "main course cost",
+          "dessert pricing", "combo meal prices", "set menu cost",
+          "buffet price", "special offer pricing", "discount prices",
+          "happy hour pricing", "weekend rates", "festival pricing",
+          "premium dishes cost", "luxury dining price", "fine dining cost",
+          "casual dining prices", "family meal budget", "corporate dining costs"
+        ],
+        "responses": [
+          "We offer various price ranges to suit all budgets, with main courses starting from ₹450!",
+          "Our pricing is competitive with main dishes from ₹450-₹1200, ensuring great value!",
+          "Enjoy quality dining with appetizers from ₹250, main courses ₹450-₹1200, desserts from ₹200!",
+          "We provide excellent value with dishes ranging from ₹450-₹1200 for mains, suitable for all budgets!",
+          "Our price range: Appetizers ₹250-₹600, Mains ₹450-₹1200, Desserts ₹200-₹500 - great quality!",
+          "Competitive pricing: Starters from ₹250, Main courses ₹450-₹1200, ensuring premium quality!",
+          "We offer budget-friendly to premium options with main dishes starting at ₹450!",
+          "Price range designed for all: Mains ₹450-₹1200, with exceptional quality and service!"
+        ]
+      },
+      {
+        "tag": "special_offers",
+        "patterns": [
+          "any discounts", "special offers", "today's deal", "promotions",
+          "happy hour", "weekend special", "festival offer", "seasonal discount",
+          "combo offers", "set menu deals", "family package", "couple special",
+          "corporate discount", "student discount", "senior citizen offer",
+          "birthday special", "anniversary offer", "celebration deals",
+          "lunch specials", "dinner promotions", "early bird offer",
+          "late night deals", "buffet offers", "unlimited packages",
+          "buy one get one", "discount coupons", "loyalty program",
+          "membership benefits", "referral offers", "seasonal promotions",
+          "festive discounts", "holiday specials", "new customer offer"
+        ],
+        "responses": [
+          "Check out our current offers: Happy Hour 4-7PM, Weekend Buffet, and Festival Specials!",
+          "Current promotions: Happy Hour discounts, Weekend special menus, and seasonal festival offers!",
+          "We have Happy Hour 4-7PM daily, Weekend buffet specials, and ongoing festival discounts!",
+          "Special offers: Daily Happy Hour 4-7PM, Weekend feast menus, and exclusive festival deals!",
+          "Enjoy our promotions: Happy Hour 4-7PM, Weekend specials, and limited-time festival offers!",
+          "Current deals include Happy Hour discounts, Weekend buffet, and special festival menus!",
+          "We're running Happy Hour 4-7PM, Weekend specials, and exclusive festival promotions!",
+          "Check our specials: Daily Happy Hour, Weekend feasts, and seasonal festival discounts!"
+        ]
+      }
+    ]
+  }

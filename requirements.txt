@@ -10,3 +10,6 @@ pycryptodome
 crypto
 flask
 flask-cors
+scikeras
+seaborn
+gensim

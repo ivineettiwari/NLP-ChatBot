@@ -1,211 +1,321 @@
-Detailed info for building an NLP chatbot using TensorFlow and TFLearn with Deep Neural Networks (DNN) and regression, based on your provided JSON training data:
+# Restaurant Chatbot - Advanced NLP with TensorFlow & FastAPI
 
----
+An intelligent restaurant chatbot built with advanced Natural Language Processing (NLP) techniques, deep learning models, and modern web technologies. This chatbot can handle restaurant inquiries, table reservations, menu information, and provide engaging customer service.
 
-# NLP Chatbot using TensorFlow and TFLearn
+## 🚀 Features
 
-This project demonstrates how to build an NLP-based chatbot using TensorFlow and TFLearn with Deep Neural Networks (DNN) and regression techniques. The chatbot is trained using intents and responses provided in the given JSON format.
+- **Advanced NLP Processing**: Tokenization, lemmatization, POS tagging, and text cleaning
+- **Multiple Model Architectures**: CNN, LSTM, Transformer, and Ensemble models
+- **Real-time Streaming**: Server-Sent Events for live response streaming
+- **Modern Web Framework**: FastAPI with async/await support
+- **Data Augmentation**: Automatic training data enhancement
+- **Hyperparameter Optimization**: Automated model tuning
+- **Comprehensive Evaluation**: Multiple metrics and visualization
 
-## Requirements
+## 🏗️ Architecture
 
-- Python 3.x
-- TensorFlow
-- TFLearn
-- Numpy
-- NLTK
-- JSON
-- Sklearn
-- Flask (optional for creating a web interface)
+### Model Stack
+- **EnhancedTextPreprocessor**: Advanced NLP preprocessing with POS tagging
+- **CNN + LSTM Hybrid**: Multi-scale feature extraction with bidirectional context
+- **Transformer Model**: Self-attention mechanism for better context understanding
+- **Model Ensemble**: Weighted combination of multiple architectures
+- **FastAPI Backend**: High-performance async web server
 
-You can install the required libraries by running:
+### Key Technologies
+- **TensorFlow/Keras**: Deep learning framework
+- **NLTK**: Natural Language Processing
+- **FastAPI**: Modern web framework
+- **Scikit-learn**: Machine learning utilities
+- **NumPy/Pandas**: Data processing
 
+## 📁 Project Structure
+
+```
+chatbot-project/
+├── filesTech/
+│   ├── final.json                    # Training data with intents
+│   ├── enhanced_preprocessor.pickle  # Saved preprocessor
+│   ├── advanced_model_improved.h5    # Single trained model
+│   └── ensemble_models/              # Ensemble model directory
+│       ├── advanced_model.h5
+│       ├── transformer_model.h5
+│       └── cnn_model.h5
+├── static/
+│   ├── css/
+│   │   └── style.css                 # Chat interface styling
+│   └── js/
+│       └── script.js                 # Frontend JavaScript
+├── templates/
+│   └── index.html                    # Chat interface HTML
+├── jobs.py                          # Model training script
+├── app.py                           # FastAPI server
+└── requirements.txt                 # Python dependencies
+```
+
+## 🛠️ Installation
+
+### Prerequisites
+- Python 3.12
+- pip package manager
+
+### Step 1: Clone and Setup
 ```bash
-pip install tensorflow tflearn numpy nltk scikit-learn Flask
+# Clone the repository
+git clone https://github.com/ivineettiwari/NLP-ChatBot.git
+cd .\NLP-ChatBot\
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-## Project Structure
-
-```plaintext
-- chatbot/
-  - data/
-    - intents.json  # JSON file containing training data
-  - model/
-    - chatbot_model.tflearn  # Saved model after training
-  - chatbot.py  # Python script for training and predicting
-  - app.py  # Optional Flask app for a web-based interface
+### Step 2: Download NLTK Data
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
 ```
 
-## Training Data
-
-The training data is in the `intents.json` file and contains various patterns (user inputs) and responses (bot replies). Here’s a brief look at the format of the JSON data:
-
+### Step 3: Prepare Training Data
+Create `filesTech/final.json` with your training data:
 ```json
 {
-    "intents": [
-        {
-            "tag": "greeting",
-            "patterns": [
-                "Hi",
-                "Hey",
-                "How are you",
-                "Is anyone there?",
-                "Hello",
-                "Good day",
-                "Whats up",
-                "Whats cooking"
-            ],
-            "responses": [
-                "Hello!",
-                "Good to see you again!",
-                "Hi there, how can I help?",
-                "Hello! I'm Dexter. How may I help you?",
-                "Hey there!"
-            ]
-        },
-        {
-            "tag": "book_table",
-            "patterns": [
-                "Book a table",
-                "Can I book a table?",
-                "I want to book a table",
-                "Book seat",
-                "I want to book a seat",
-                "Can I book a seat?"
-            ],
-            "responses": [""]
-        },
-        ...
-    ]
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning"],
+      "responses": ["Hello! Welcome to our restaurant!"]
+    },
+    {
+      "tag": "book_table",
+      "patterns": ["Book a table", "I want to reserve"],
+      "responses": ["I'd be happy to help you book a table!"]
+    }
+  ]
 }
 ```
 
-## Steps to Build the Chatbot
+## 🚀 Quick Start
 
-### 1. Preprocess the Data
+### Option 1: Train New Models
+```bash
+# Train the chatbot models
+python jobs.py
+```
 
-The first step is to preprocess the input data by tokenizing the patterns and encoding the responses.
+This will:
+- Preprocess and augment training data
+- Perform hyperparameter optimization
+- Train single and ensemble models
+- Save models and preprocessor
+- Generate evaluation reports
 
+### Option 2: Run Chatbot Server
+```bash
+# Start the FastAPI server
+python app.py
+```
+
+Server will start at: `http://localhost:8000`
+
+## 📊 Training Process
+
+### Data Processing Pipeline
+1. **Text Cleaning**: Lowercase, remove special characters, normalize whitespace
+2. **Tokenization**: Split text into words with POS tagging
+3. **Lemmatization**: Convert words to base form using WordNet
+4. **Vocabulary Building**: Create word-to-index mapping
+5. **Sequence Padding**: Standardize input lengths
+
+### Model Training Features
+- **Data Augmentation**: Synonym replacement, random insertion, paraphrasing
+- **Class Balancing**: Automatic handling of imbalanced datasets
+- **Hyperparameter Tuning**: Manual optimization of embedding dimensions, dropout rates, learning rates
+- **Ensemble Learning**: Combined predictions from multiple model architectures
+- **Advanced Callbacks**: Early stopping, learning rate scheduling, model checkpointing
+
+## 🌐 API Endpoints
+
+### Chat Endpoints
+- `POST /chat` - Get chatbot response (JSON)
+- `GET /stream?message=...` - Stream response with Server-Sent Events
+- `GET /` - Web chat interface
+
+### Management Endpoints
+- `GET /health` - System health check
+- `GET /intents` - List available intents
+- `POST /reset-seats` - Reset available seats (admin)
+
+### Example API Usage
+```python
+import requests
+
+# Regular chat
+response = requests.post("http://localhost:8000/chat", 
+    json={"message": "Book a table for 2", "use_ensemble": True}
+)
+print(response.json())
+
+# Health check
+status = requests.get("http://localhost:8000/health")
+print(status.json())
+```
+
+## 🧠 Model Architectures
+
+### 1. Advanced Model (CNN + LSTM)
+```python
+Embedding → SpatialDropout → Multi-scale CNN → Bidirectional LSTM → Dense Layers
+```
+- **Embedding**: 300-dimensional word vectors
+- **CNN**: Multi-scale feature extraction (2,3,4-grams)
+- **LSTM**: Bidirectional context understanding
+- **Regularization**: Dropout, BatchNorm, L2 regularization
+
+### 2. Transformer Model
+```python
+Embedding → MultiHeadAttention → LayerNorm → FeedForward → Output
+```
+- **Self-Attention**: 8-head multi-head attention
+- **Positional Encoding**: Implicit through embeddings
+- **Layer Normalization**: Stabilized training
+
+### 3. Ensemble Model
+- **Weighted Average**: 40% advanced, 40% transformer, 20% CNN
+- **Fallback Handling**: Automatic fallback to single model
+
+## 📈 Performance Optimization
+
+### Training Techniques
+- **Learning Rate Scheduling**: Exponential decay
+- **Early Stopping**: Prevents overfitting
+- **Class Weighting**: Handles imbalanced data
+- **Gradient Clipping**: Prevents exploding gradients
+
+### Data Enhancement
+- **Synonym Replacement**: Using WordNet thesaurus
+- **Random Insertion**: Adds contextual synonyms
+- **Data Balancing**: Upsamples minority classes
+
+## 🔧 Configuration
+
+### Hyperparameters
+```python
+best_config = {
+    'embedding_dim': 300,      # Word vector dimensions
+    'learning_rate': 0.001,    # Optimizer learning rate  
+    'dropout_rate': 0.3,       # Dropout for regularization
+    'batch_size': 32,          # Training batch size
+    'epochs': 150              # Training epochs
+}
+```
+
+### Model Settings
+- **Vocabulary Size**: Dynamic based on training data
+- **Sequence Length**: 95th percentile of training sequences
+- **Embedding Dimensions**: 100-300 (tuned automatically)
+- **Output Classes**: Based on intent tags
+
+## 📊 Evaluation Metrics
+
+The training process evaluates:
+- **Accuracy**: Overall prediction correctness
+- **Precision**: Relevant predictions among selected
+- **Recall**: Relevant predictions captured
+- **Confusion Matrix**: Visual classification performance
+- **Training History**: Accuracy/loss over epochs
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Model Loading Errors**
+```bash
+# Ensure all model files are present
+ls filesTech/ensemble_models/
+```
+
+**NLTK Data Missing**
 ```python
 import nltk
-import json
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from nltk.stem import WordNetLemmatizer
-
-# Initialize lemmatizer and load training data
-lemmatizer = WordNetLemmatizer()
-with open('data/intents.json') as file:
-    data = json.load(file)
-
-# Initialize lists
-patterns = []
-responses = []
-tags = []
-
-# Process each intent
-for intent in data['intents']:
-    for pattern in intent['patterns']:
-        word_list = nltk.word_tokenize(pattern)
-        patterns.append([lemmatizer.lemmatize(word.lower()) for word in word_list])
-    tags.append(intent['tag'])
-    responses.append(intent['responses'][0])
-
-# Create a list of words and tags
-words = sorted(list(set([lemmatizer.lemmatize(w.lower()) for w in nltk.corpus.words.words()])))
-tags = sorted(list(set(tags)))
-
-# Convert the text into a bag of words (BoW) representation
-training_sentences = []
-training_labels = []
-
-for pattern in patterns:
-    bag = []
-    for word in words:
-        bag.append(1 if word in pattern else 0)
-    training_sentences.append(bag)
-    training_labels.append(tags.index(intent['tag']))
-
-# Convert labels to one-hot encoding
-training_labels = np.array(training_labels)
+nltk.download('all')  # Download all required data
 ```
 
-### 2. Build the Neural Network Model
+**Memory Issues**
+- Reduce batch size in training
+- Use smaller embedding dimensions
+- Enable GPU acceleration
 
-We will use a Deep Neural Network (DNN) with TensorFlow and TFLearn.
+**Low Accuracy**
+- Add more training data
+- Increase model complexity
+- Adjust hyperparameters
 
-```python
-import tflearn
-from tflearn import input_data, fully_connected, regression
+## 🚀 Deployment
 
-# Define the neural network architecture
-network = input_data(shape=[None, len(training_sentences[0])])
-network = fully_connected(network, 128)
-network = fully_connected(network, 64)
-network = fully_connected(network, len(tags), activation='softmax')
-network = regression(network)
+### Production Deployment
+```bash
+# Install production server
+pip install uvicorn
 
-# Create and train the model
-model = tflearn.DNN(network)
-model.fit(np.array(training_sentences), np.array(training_labels), n_epoch=200, batch_size=8, show_metric=True)
-
-# Save the model for future use
-model.save('model/chatbot_model.tflearn')
+# Run production server
+uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
-### 3. Predict User Inputs
-
-To predict user inputs, we need to convert the input sentence to a similar format as the training data (bag of words).
-
-```python
-def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(w.lower()) for w in sentence_words]
-    return sentence_words
-
-def bow(sentence, words):
-    sentence_words = clean_up_sentence(sentence)
-    bag = [0] * len(words)
-    for s in sentence_words:
-        for i, w in enumerate(words):
-            if w == s:
-                bag[i] = 1
-    return(np.array(bag))
-
-def respond(sentence):
-    p = bow(sentence, words)
-    prediction = model.predict([p])
-    return tags[np.argmax(prediction)]
+### Docker Deployment
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
 ```
 
-### 4. Integrating the Model with a Web Interface (Optional)
+## 📝 Customization
 
-To integrate the chatbot into a web interface, you can use Flask.
-
-```python
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route('/chat', methods=['POST'])
-def chat():
-    message = request.json['message']
-    response = respond(message)
-    return jsonify({'response': response})
-
-if __name__ == '__main__':
-    app.run(debug=True)
+### Adding New Intents
+1. Add to `filesTech/final.json`:
+```json
+{
+  "tag": "new_intent",
+  "patterns": ["pattern1", "pattern2"],
+  "responses": ["response1", "response2"]
+}
 ```
 
-### 5. Testing the Model
-
-Test the chatbot by providing a pattern (e.g., “Hi”, “Book a table”) and receiving the bot’s response.
-
-```python
-print(respond("Hi"))  # Should output a greeting response
+2. Retrain models:
+```bash
+python jobs.py
 ```
 
-## Conclusion
+### Modifying Business Logic
+Edit `handle_special_cases()` in `app.py` for custom business rules.
 
-This project demonstrates how to build a basic NLP chatbot using TensorFlow and TFLearn with a Deep Neural Network and regression. You can extend this project by adding more intents, training the model with more data, and integrating it into a real-world application.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/improvement`)
+3. Commit changes (`git commit -am 'Add new feature'`)
+4. Push branch (`git push origin feature/improvement`)
+5. Create Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- TensorFlow/Keras team for deep learning framework
+- NLTK team for NLP tools
+- FastAPI for modern web framework
+- Contributors and testers
 
 ---
+
+**Ready to build your intelligent restaurant chatbot?** Start with the installation guide above and explore the powerful features of this advanced NLP system!
