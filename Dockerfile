@@ -22,8 +22,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
-# Expose port (FastAPI default: 8000)
-EXPOSE 8000
+# Expose FastAPI and TensorBoard ports
+EXPOSE 8000 6006
 
 # Run the application with Uvicorn
 # Replace "main:app" with your FastAPI entrypoint (filename:app_instance)

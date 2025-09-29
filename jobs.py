@@ -1,4 +1,5 @@
 # Imports
+from datetime import datetime
 import nltk
 import numpy as np
 import tensorflow as tf
@@ -56,6 +57,12 @@ nltk.download('wordnet', quiet=True)
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
 from nltk.tokenize import word_tokenize
+
+base_log_dir = "logs/fit"
+run_id = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+
+def get_run_logdir(run_name):
+    return os.path.join(base_log_dir, run_id, run_name)
 
 
 class EnhancedTextPreprocessor:
@@ -410,6 +417,9 @@ def create_cnn_model(vocab_size: int, num_classes: int, max_sequence_length: int
 # 3. ADVANCED TRAINING TECHNIQUES
 def train_advanced_model(model, X_train, y_train, X_val, y_val, epochs: int = 200):
     """Enhanced training with advanced techniques"""
+
+    # Run 1
+    tensorboard_callback_1 = TensorBoard(log_dir=get_run_logdir("train_advanced_model"))
     
     def lr_scheduler(epoch, lr):
         if epoch < 10:
@@ -438,7 +448,8 @@ def train_advanced_model(model, X_train, y_train, X_val, y_val, epochs: int = 20
             save_best_only=True,
             verbose=1
         ),
-        LearningRateScheduler(lr_scheduler)
+        LearningRateScheduler(lr_scheduler),
+        tensorboard_callback_1
     ]
     
     # Class weights for imbalanced data
@@ -470,6 +481,8 @@ class ModelEnsemble:
         self.num_classes = num_classes
         self.max_sequence_length = max_sequence_length
         self.models = {}
+        self.tensorboard_callback_2 = TensorBoard(log_dir=get_run_logdir("ModelEnsemble"))
+
         
     def create_ensemble(self):
         """Create ensemble of multiple models"""
@@ -497,7 +510,8 @@ class ModelEnsemble:
                 verbose=0,
                 callbacks=[
                     EarlyStopping(patience=10, restore_best_weights=True),
-                    ReduceLROnPlateau(patience=5)
+                    ReduceLROnPlateau(patience=5),
+                    self.tensorboard_callback_2
                 ]
             )
             
@@ -528,6 +542,9 @@ class ModelEnsemble:
 # 5. SIMPLIFIED HYPERPARAMETER OPTIMIZATION
 def manual_hyperparameter_tuning(X_train, y_train, X_val, y_val, vocab_size: int, num_classes: int, max_sequence_length: int):
     """Manual hyperparameter tuning with predefined configurations"""
+    # Run 2
+    tensorboard_callback_3 = TensorBoard(log_dir=get_run_logdir("manual_hyperparameter_tuning"))
+
     
     configurations = [
         {
@@ -580,7 +597,8 @@ def manual_hyperparameter_tuning(X_train, y_train, X_val, y_val, vocab_size: int
             batch_size=32,
             verbose=0,
             callbacks=[
-                EarlyStopping(patience=5, restore_best_weights=True, monitor='val_accuracy')
+                EarlyStopping(patience=5, restore_best_weights=True, monitor='val_accuracy'),
+                tensorboard_callback_3
             ]
         )
         
